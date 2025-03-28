@@ -9,7 +9,8 @@ public class DemoController {
     //create mapping for helloWorld
     @GetMapping("/hello")
     public String sayHello(Model theModel){
-        
+        theModel.addAttribute("theDate", java.time.LocalDateTime.now());
+        return "helloWorld";
     }
 
 }
