@@ -1,33 +1,41 @@
-.date{
-    font-style: italic;
-    color:white;
-    background-color:gray;
-    margin:100px;
-    border:2px solid black;
-    text-align: center;
-    padding: 40px;
-    font-size: 30px;
-    border-radius:15px;
+body{
+    background-color:#FFFFCC;
 }
 
-table,tr,td{
-    border: 2px solid black;
-    padding:20px;
-    font-size:25px;
-    margin-left:470px;
-    border-collapse: collapse;
+#place{
+    font-size:20px;
+    margin-left:550px;
+    padding:15px;
+    border-radius:8px;
+    margin-top:60px;
+    background-color:#BFBFBF;
+    }
 
-}
-
-table{
+#submit{
+    font-size:30px;
+    margin-left:630px;
+    margin-top:10px;
     border-radius:10px;
+    font-style:bold;
 }
 
-/* Çift satırlara arka plan rengi ver */
-tr:nth-child(even) {
-        background-color: grey;
+h1{
+    border:2px solid black;
+    text-align:center;
+    padding:5px;
+    margrin-top:40px;
+    border-radius:14px;
+    background-color:#99FFFF;
+
 }
 
-#baslik{
-    font-style: bold;
+h3{
+    border:2px solid black;
+    text-align:center;
+    padding:5px;
+    margrin-top:30px;
+    border-radius:14px;
+    background-color:#99FFFF;
 }
+
+
