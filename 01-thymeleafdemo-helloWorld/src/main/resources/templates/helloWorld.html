@@ -6,8 +6,58 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>thymeleaf Demo</title>
+
+    <!-- reference CSS file-->
+    <link rel="stylesheet" th:href="@{/css/demo.css}"/>
+
 </head>
 <body>
-    <p th:text="'Time on the server is ' + ${theDate}"/>
+    <p th:text="'Time on the server is ' + ${theDate}"  class = "date"/>
+
+    <table id="tablo">
+        <tr id="baslik">
+            <td>Marka</td>
+            <td>Model</td>
+            <td>Year</td>
+        </tr>
+        <tr>
+            <td>Mercedes</td>
+            <td>Cls</td>
+            <td>2012</td>
+        </tr>
+        <tr>
+            <td>Toyota</td>
+            <td>Camry</td>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <td>Porshe</td>
+            <td>Panamera</td>
+            <td>2018</td>
+        </tr>
+    </table>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
