@@ -38,4 +38,13 @@ h3{
     background-color:#99FFFF;
 }
 
+.message{
+    border:2px solid black;
+    text-align:center;
+    padding:5px;
+    margrin-top:30px;
+    border-radius:14px;
+    background-color:#99FFFF;
+}
+
 
