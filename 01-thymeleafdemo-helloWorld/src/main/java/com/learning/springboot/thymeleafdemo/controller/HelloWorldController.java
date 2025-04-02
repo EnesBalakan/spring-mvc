@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -16,7 +17,7 @@ public class HelloWorldController {
         return "helloworld-form";
     }
     //need a controller method to  process the HTML form
-    @RequestMapping("/processForm")
+    @GetMapping("/processForm")
     public String processForm(){
         return "helloWorld";
     }
@@ -24,7 +25,7 @@ public class HelloWorldController {
     // need a controller method to  read form data and
     // add data to the model
 
-    @RequestMapping("/processFormTwo")
+    @PostMapping("/processFormTwo")
     public String letsBuyCar(HttpServletRequest request, Model model){
 
         // read the request parameter from the HTML form
@@ -42,7 +43,7 @@ public class HelloWorldController {
         return "helloWorld";
     }
 
-    @RequestMapping("/processFormThree")
+    @PostMapping("/processFormThree")
     public String processFormThree(@RequestParam("studentName") String theName, Model model){
 
 
