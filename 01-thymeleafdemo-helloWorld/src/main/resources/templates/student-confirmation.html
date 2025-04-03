@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Confirmation</title>
+    <link rel="stylesheet" th:href="@{/css/student-form.css}">
+</head>
+<body>
+<h2 id="confirm">Student Confirmation</h2>
+<div id="confirmed">The Student Is Confirmed: <span th:text="${student.firstName} + ' ' + ${student.lastName}"/> </div>
+<div id="country">Language: <span th:text="${student.country}"/></div>
+<div id="gender">Gender: <span th:text="${student.gender}"/></div>
+</body>
+</html>
