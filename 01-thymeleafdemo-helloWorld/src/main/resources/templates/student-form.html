@@ -12,15 +12,24 @@
     <div class="name">Last Name: <input type="text" th:field="*{lastName}"/></div>
       <div class="name">Language:
         <select th:field="*{country}">
-
             <option th:each="tempLanguage : ${languages}" th:value="${tempLanguage}" th:text="${tempLanguage}"/>
-
         </select>
       </div>
 
     <div>Gender:
-      <input type="radio" th:field="*{gender}" th:value="Male" name="gender"> Male
-      <input type="radio" th:field="*{gender}" th:value="Female" name="gender"> Female
+      <input type="radio" th:field = "*{gender}"
+                          th:each = "tempGender : ${gender}"
+                          th:value = "${tempGender}"
+                          th:text = "${tempGender}"/>
+
+    </div>
+
+    <div>Progrmas:
+      <input type="checkbox"
+                              th:field = "*{programs}"
+                              th:each = "tempPrograms : ${progrmas}"
+                              th:value = "${tempPrograms}"
+                              th:text = "${tempPrograms}"/>
     </div>
       <div><input id="submit" type="submit" value="Submit"/></div>
   </form>

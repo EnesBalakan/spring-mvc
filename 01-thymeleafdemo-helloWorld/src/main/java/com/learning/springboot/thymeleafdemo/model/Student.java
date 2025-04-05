@@ -5,6 +5,7 @@ public class Student {
     private String lastName;
     private String country;
     private String gender;
+    private String programs;
 
     public Student(){
 
@@ -41,5 +42,13 @@ public class Student {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getPrograms() {
+        return programs;
+    }
+
+    public void setPrograms(String programs) {
+        this.programs = programs;
     }
 }

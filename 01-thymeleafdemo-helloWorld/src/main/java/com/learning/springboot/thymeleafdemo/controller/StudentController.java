@@ -11,6 +11,13 @@ import java.util.List;
 
 @Controller
 public class StudentController {
+
+    @Value("${programs}")
+    private List<String> programs;
+
+    @Value("${gender}")
+    private List<String> gender;
+
     @Value("${languages}")
     private List<String> languages;
 
@@ -27,6 +34,12 @@ public class StudentController {
 
         // add the list of languages to the model
         theModel.addAttribute("languages", languages);
+
+        // add the list of gender to the model
+        theModel.addAttribute("gender", gender);
+
+        // add the list of programs  to the model;
+        theModel.addAttribute("progrmas", programs);
 
         return "student-form";
     }
