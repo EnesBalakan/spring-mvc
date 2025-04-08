@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>EnCars</title>
+    <link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+
+<form th:action="@{/processForm}" th:object="${car}" method="post">
+
+    <div>Car brand: <input type="text" th:field="*{brand}"/></div>
+    <span th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}" class="error"></span>
+
+    <div>Car model: <input type="text" th:field="*{model}"/></div>
+    <span th:if="${#fields.hasErrors('model')}" th:errors="*{model}" class="error"/>
+    <div>Colour:
+        <input type="radio" th:field = "*{colour}"
+               th:each = "tempColour : ${colour}"
+               th:value = "${tempColour}"
+               th:text = "${tempColour}"/>
+
+    </div>
+    <div><input type="submit" value="Search" id="button"/></div>
+</form>
+
+</body>
+</html>
