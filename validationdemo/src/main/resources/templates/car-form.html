@@ -14,13 +14,20 @@
 
     <div>Car model: <input type="text" th:field="*{model}"/></div>
     <span th:if="${#fields.hasErrors('model')}" th:errors="*{model}" class="error"/>
-    <div>Colour:
-        <input type="radio" th:field = "*{colour}"
-               th:each = "tempColour : ${colour}"
-               th:value = "${tempColour}"
-               th:text = "${tempColour}"/>
 
+    <div>Car brand: <input type="number" th:field="*{year}"/></div>
+    <span th:if="${#fields.hasErrors('year')}" th:errors="*{year}" class="error"></span>
+
+    <div>
+        Country:
+        <div th:each="tempSystem : ${countries}">
+            <label>
+                <input type="checkbox" th:field="*{country}" th:value="${tempSystem}"/>
+                <span th:text="${tempSystem}"></span>
+            </label>
+        </div>
     </div>
+
     <div><input type="submit" value="Search" id="button"/></div>
 </form>
 

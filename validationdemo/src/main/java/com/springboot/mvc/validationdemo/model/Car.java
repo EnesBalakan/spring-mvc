@@ -3,6 +3,8 @@ package com.springboot.mvc.validationdemo.model;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+import java.util.List;
+
 public class Car {
     @NotNull(message = "is required!")
     @Size(min = 2, message = "is required!")
@@ -10,20 +12,17 @@ public class Car {
     @NotNull(message = "is required!")
     @Size(min = 1, message = "is required!")
     private String model = "";
-    private String colour;
+    @NotNull(message = "is required!")
+    @Size(min = 4, max = 4, message = "please enter number between 999 and 2026")
+    private String year;
+    private List<String> country;
+
 
 
     public Car(){
 
     }
 
-    public String getColour() {
-        return colour;
-    }
-
-    public void setColour(String colour) {
-        this.colour = colour;
-    }
 
     public String getBrand() {
         return brand;
@@ -39,5 +38,21 @@ public class Car {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public List<String> getCountry() {
+        return country;
+    }
+
+    public void setCountry(List<String> country) {
+        this.country = country;
     }
 }
