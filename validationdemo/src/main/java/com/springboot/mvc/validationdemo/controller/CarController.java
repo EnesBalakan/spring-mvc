@@ -27,6 +27,7 @@ public class CarController {
         dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
     }
 
+    //proerties deki listeyi yazdırmak için
     @Value("${countries}")
     private List<String> countries;
 

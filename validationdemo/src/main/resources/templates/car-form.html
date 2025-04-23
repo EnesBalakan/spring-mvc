@@ -15,10 +15,10 @@
     <div>Car model: <input type="text" th:field="*{model}"/></div>
     <span th:if="${#fields.hasErrors('model')}" th:errors="*{model}" class="error"/>
 
-    <div>Car brand: <input type="number" th:field="*{year}"/></div>
+    <div>Car Year: <input type="number" th:field="*{year}"/></div>
     <span th:if="${#fields.hasErrors('year')}" th:errors="*{year}" class="error"></span>
 
-    <div>
+    <div id="country">
         Country:
         <div th:each="tempSystem : ${countries}">
             <label>
@@ -27,6 +27,13 @@
             </label>
         </div>
     </div>
+
+    <div>ID name: <input type="text" th:field="*{freePasses}"/></div>
+    <span th:if="${#fields.hasErrors('freePasses')}" th:errors="*{freePasses}" class="error"></span>
+
+    <div>Postal Code: <input type="text" th:field="*{licencePlate}"/></div>
+    <span th:if="${#fields.hasErrors('licencePlate')}" th:errors="*{licencePlate}" class="error"></span>
+
 
     <div><input type="submit" value="Search" id="button"/></div>
 </form>
