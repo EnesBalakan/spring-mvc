@@ -1,10 +1,13 @@
 package com.springboot.mvc.validationdemo.model;
 
+import com.springboot.mvc.validationdemo.validation.CourseCode;
 import jakarta.validation.constraints.*;
 
 import java.util.List;
 
 public class Car {
+    @CourseCode
+    private String courseCode;
     @NotNull(message = "is required!")
     @Size(min = 2, message = "is required!")
     private String brand = "";
@@ -79,5 +82,13 @@ public class Car {
 
     public void setLicencePlate(String licencePlate) {
         this.licencePlate = licencePlate;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 }

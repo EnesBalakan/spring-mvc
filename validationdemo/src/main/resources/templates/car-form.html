@@ -10,12 +10,15 @@
 <form th:action="@{/processForm}" th:object="${car}" method="post">
 
     <div>Car brand: <input type="text" th:field="*{brand}"/></div>
+    <!--Add Error message (if present-->
     <span th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}" class="error"></span>
 
     <div>Car model: <input type="text" th:field="*{model}"/></div>
+    <!--Add Error message (if present-->
     <span th:if="${#fields.hasErrors('model')}" th:errors="*{model}" class="error"/>
 
     <div>Car Year: <input type="number" th:field="*{year}"/></div>
+    <!--Add Error message (if present-->
     <span th:if="${#fields.hasErrors('year')}" th:errors="*{year}" class="error"></span>
 
     <div id="country">
@@ -29,11 +32,16 @@
     </div>
 
     <div>ID name: <input type="text" th:field="*{freePasses}"/></div>
+    <!--Add Error message (if present-->
     <span th:if="${#fields.hasErrors('freePasses')}" th:errors="*{freePasses}" class="error"></span>
 
     <div>Postal Code: <input type="text" th:field="*{licencePlate}"/></div>
+    <!--Add Error message (if present-->
     <span th:if="${#fields.hasErrors('licencePlate')}" th:errors="*{licencePlate}" class="error"></span>
 
+    <div>Course Code: <input type="text" th:field="*{courseCode}"/></div>
+    <!--Add Error message (if present-->
+    <span th:if="${#fields.hasErrors('courseCode')}" th:errors="*{courseCode}" class="error"></span>
 
     <div><input type="submit" value="Search" id="button"/></div>
 </form>

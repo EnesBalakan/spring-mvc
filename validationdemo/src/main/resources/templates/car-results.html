@@ -8,7 +8,7 @@
 <body>
 
 <div>
-    The car Results: <span th:text="${car.brand + ' ' + car.model + ' ' car.year + ' ' car.country}"></span>
+    The car Results: <span th:text="${car.brand + ' ' + car.model + ' ' + car.year + ' ' + car.country}"></span>
 </div>
 
 <div>
@@ -16,7 +16,11 @@
 </div>
 
 <div>
-    Free Passes: <span th:text="${car.licencePlate}"></span>
+    Licence Plate: <span th:text="${car.licencePlate}"></span>
+</div>
+
+<div>
+    Course Code: <span th:text="${car.courseCode}"></span>
 </div>
 
 </body>
