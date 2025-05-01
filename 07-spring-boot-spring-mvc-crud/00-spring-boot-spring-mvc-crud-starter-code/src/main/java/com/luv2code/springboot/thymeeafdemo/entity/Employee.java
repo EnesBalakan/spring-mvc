@@ -2,7 +2,6 @@ package com.luv2code.springboot.thymeeafdemo.entity;
 
 // JPA (Java Persistence API) anotasyonlarını içeri aktarıyor. Veritabanı işlemleri için kullanılır
 import jakarta.persistence.*;
-
 // Bu sınıfın bir JPA entity (varlık) olduğunu belirtir. Yani bu sınıf, veritabanındaki bir tabloya karşılık gelir
 @Entity
 // Sınıfın, veritabanındaki employee adlı tabloya karşılık geldiğini belirtir.

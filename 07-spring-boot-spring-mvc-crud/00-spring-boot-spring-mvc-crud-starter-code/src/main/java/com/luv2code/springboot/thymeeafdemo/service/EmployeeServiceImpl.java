@@ -18,9 +18,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeRepository = theEmployeeRepository;
     }
 
+    // databasedeki verileri listeler
     @Override
     public List<Employee> findAll() {
-        return employeeRepository.findAll();
+        return employeeRepository.findAllByOrderByLastNameAsc();
     }
 
     @Override
