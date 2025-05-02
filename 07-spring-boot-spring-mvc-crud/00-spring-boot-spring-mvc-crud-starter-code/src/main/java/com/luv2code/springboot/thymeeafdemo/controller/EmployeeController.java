@@ -63,4 +63,13 @@ public class EmployeeController {
         // use a redirect to prevent duplicate submiss
         return "redirect:/employees/list";
     }
+
+    @GetMapping("/delete")
+    public String delete(@RequestParam("employeeId")int theId){
+
+        // delete the employee
+        employeeService.deleteById(theId);
+        //redirect to the /employees/list
+        return "redirect:/employees/list";
+    }
 }
